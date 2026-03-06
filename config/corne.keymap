@@ -22,7 +22,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "Base";
+            display-name = "BASE";
             bindings = <
 &kp ESC  &kp Q  &kp W  &kp E  &kp R      &kp T        &kp Z     &kp U      &kp I     &kp O   &kp P          &kp SEMICOLON
 &kp TAB  &kp A  &kp S  &kp D  &kp F      &kp G        &kp H     &kp J      &kp K     &kp L   &kp BACKSPACE  &kp SLASH
@@ -32,7 +32,7 @@
         };
 
         shift_layer {
-            display-name = "Base+shift";
+            display-name = "SHFT";
             bindings = <
 &kp CARET  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)    &kp LS(Z)  &kp LS(U)  &kp LS(I)  &kp LS(O)  &kp LS(P)  &kp COLON
 &kp END    &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)    &kp LS(H)  &kp LS(J)  &kp LS(K)  &kp LS(L)  &kp DEL    &kp ASTERISK
@@ -42,7 +42,7 @@
         };
 
         function_layer {
-            display-name = "Raise";
+            display-name = "FUNC";
             bindings = <
 &kp F1   &kp F2   &kp F3    &kp F4      &kp F5       &kp F6           &kp F7    &kp F8        &kp F9    &kp F10   &kp F11   &kp F12
 &kp N1   &kp N2   &kp N3    &kp N4      &kp N5       &kp N6           &kp N7    &kp N8        &kp N9    &kp N0    &kp INS   &kp BSLH
@@ -53,11 +53,13 @@
 
         function_shift_layer {
             bindings = <
-&kp F13   &kp AT  &kp F15  &kp F16  &kp F17  &kp F18    &kp F   &kp F   &kp F     &kp F     &kp F  &kp F
-&kp HOME  &kp F   &kp F    &kp F    &kp F    &kp F      &kp F   &kp F   &kp F     &kp F     &kp F  &kp F
-&kp F     &kp F   &kp F    &kp F    &kp F    &kp F      &kp F   &kp F   &kp RBRC  &kp RBKT  &kp F  &kp F
-                           &trans   &trans   &trans     &trans  &trans  &trans
+&trans    &kp AT  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp HOME  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &soft_off
+                          &trans  &trans  &trans    &trans  &trans  &trans
             >;
+
+            label = "FNSH";
         };
     };
 };
