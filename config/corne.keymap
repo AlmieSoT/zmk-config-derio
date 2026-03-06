@@ -8,15 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        function_shift {
-            bindings = <&mo 3>;
-            key-positions = <36 41>;
-            layers = <0 1 2>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -37,7 +29,7 @@
 &kp CARET  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)    &kp LS(Z)  &kp LS(U)  &kp LS(I)  &kp LS(O)  &kp LS(P)  &kp COLON
 &kp END    &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)    &kp LS(H)  &kp LS(J)  &kp LS(K)  &kp LS(L)  &kp DEL    &kp ASTERISK
 &kp COMMA  &kp LS(Y)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(B)    &kp LS(N)  &kp LS(M)  &kp RPAR   &kp GT     &kp PLUS   &kp UNDER
-                                 &trans     &trans     &trans       &trans     &trans     &trans
+                                 &trans     &trans     &trans       &trans     &trans     &mo 3
             >;
         };
 
@@ -47,7 +39,7 @@
 &kp F1   &kp F2   &kp F3    &kp F4      &kp F5       &kp F6           &kp F7    &kp F8        &kp F9    &kp F10   &kp F11   &kp F12
 &kp N1   &kp N2   &kp N3    &kp N4      &kp N5       &kp N6           &kp N7    &kp N8        &kp N9    &kp N0    &kp INS   &kp BSLH
 &kp SQT  &kp DQT  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp AMPERSAND    &kp EXCL  &kp QUESTION  &kp LBRC  &kp LBKT  &kp PIPE  &kp TILDE
-                            &trans      &trans       &trans           &trans    &trans        &trans
+                            &mo 3       &trans       &trans           &trans    &trans        &trans
             >;
         };
 
