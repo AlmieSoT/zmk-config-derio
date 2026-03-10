@@ -21,6 +21,7 @@
             bindings = <&mo 3>;
             key-positions = <36 41>;
             timeout-ms = <1000000000>;
+            layers = <1 2>;
         };
     };
 
