@@ -25,27 +25,7 @@
 &kp ESC  &kp Q  &kp W  &kp E  &kp R      &kp T        &kp Z     &kp U      &kp I     &kp O   &kp P          &kp SEMICOLON
 &kp TAB  &kp A  &kp S  &kp D  &kp F      &kp G        &kp H     &kp J      &kp K     &kp L   &kp BACKSPACE  &kp SLASH
 &kp DOT  &kp Y  &kp X  &kp C  &kp V      &kp B        &kp N     &kp M      &kp LPAR  &kp LT  &kp EQUAL      &kp MINUS
-                       &mo 1  &kp SPACE  &kp LCTRL    &kp LGUI  &kp ENTER  &mo 2
-            >;
-        };
-
-        shift_layer {
-            display-name = "SHFT";
-            bindings = <
-&kp CARET  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)    &kp LS(Z)  &kp LS(U)  &kp LS(I)  &kp LS(O)  &kp LS(P)  &kp COLON
-&kp END    &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)    &kp LS(H)  &kp LS(J)  &kp LS(K)  &kp LS(L)  &kp DEL    &kp ASTERISK
-&kp COMMA  &kp LS(Y)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(B)    &kp LS(N)  &kp LS(M)  &kp RPAR   &kp GT     &kp PLUS   &kp UNDER
-                                 &trans     &trans     &trans       &trans     &trans     &mo 3
-            >;
-        };
-
-        function_layer {
-            display-name = "FUNC";
-            bindings = <
-&kp F1   &kp F2   &kp F3    &kp F4      &kp F5       &kp F6           &kp F7    &kp F8        &kp F9    &kp F10   &kp F11   &kp F12
-&kp N1   &kp N2   &kp N3    &kp N4      &kp N5       &kp N6           &kp N7    &kp N8        &kp N9    &kp N0    &kp INS   &kp BSLH
-&kp SQT  &kp DQT  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp AMPERSAND    &kp EXCL  &kp QUESTION  &kp LBRC  &kp LBKT  &kp PIPE  &kp TILDE
-                            &mo 3       &trans       &trans           &trans    &trans        &trans
+                       &mo 2  &kp SPACE  &kp LCTRL    &kp LGUI  &kp ENTER  &mo 3
             >;
         };
 
@@ -58,6 +38,26 @@
             >;
 
             label = "CHEK";
+        };
+
+        shift_layer {
+            display-name = "SHFT";
+            bindings = <
+&kp CARET  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)    &kp LS(Z)  &kp LS(U)  &kp LS(I)  &kp LS(O)  &kp LS(P)  &kp COLON
+&kp END    &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)    &kp LS(H)  &kp LS(J)  &kp LS(K)  &kp LS(L)  &kp DEL    &kp ASTERISK
+&kp COMMA  &kp LS(Y)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(B)    &kp LS(N)  &kp LS(M)  &kp RPAR   &kp GT     &kp PLUS   &kp UNDER
+                                 &trans     &trans     &trans       &trans     &trans     &mo 1
+            >;
+        };
+
+        function_layer {
+            display-name = "FUNC";
+            bindings = <
+&kp F1   &kp F2   &kp F3    &kp F4      &kp F5       &kp F6           &kp F7    &kp F8        &kp F9    &kp F10   &kp F11   &kp F12
+&kp N1   &kp N2   &kp N3    &kp N4      &kp N5       &kp N6           &kp N7    &kp N8        &kp N9    &kp N0    &kp INS   &kp BSLH
+&kp SQT  &kp DQT  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp AMPERSAND    &kp EXCL  &kp QUESTION  &kp LBRC  &kp LBKT  &kp PIPE  &kp TILDE
+                            &mo 1       &trans       &trans           &trans    &trans        &trans
+            >;
         };
 
         function_shift_layer {
@@ -76,12 +76,12 @@
         compatible = "zmk,conditional-layers";
 
         check_shift {
-            if-layers = <1 3>;
+            if-layers = <2 1>;
             then-layer = <4>;
         };
 
         check_function {
-            if-layers = <2 3>;
+            if-layers = <3 1>;
             then-layer = <4>;
         };
     };
