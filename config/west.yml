@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
+    - name: almie
+      url-base: https://github.com/AlmiSoT
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -12,5 +14,8 @@ manifest:
     - name: zmk-unicode
       remote: urob
       revision: v0.3
+    - name: nice-view-derio
+      remote: almie
+      revision: main
   self:
     path: config
