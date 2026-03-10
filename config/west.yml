@@ -5,7 +5,7 @@ manifest:
     - name: urob
       url-base: https://github.com/urob
     - name: almie
-      url-base: https://github.com/AlmiSoT
+      url-base: https://github.com/AlmieSoT
   projects:
     - name: zmk
       remote: zmkfirmware
