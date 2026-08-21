@@ -212,6 +212,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
+
+        f1: f1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F1";
+            bindings = <&kp F1>, <&kp F13>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
