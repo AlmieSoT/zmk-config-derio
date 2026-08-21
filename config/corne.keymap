@@ -6,6 +6,7 @@
 
 #include <behaviors/unicode.dtsi>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 &uc { default-mode = <UC_MODE_LINUX>; };
@@ -184,6 +185,33 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
+
+        llay0: llay0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LLAY0";
+            bindings = <&none>, <&soft_off>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RGUI|MOD_LGUI)>;
+        };
+
+        dol: dol {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOL";
+            bindings = <&kp DOLLAR>, <&kp HASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        esc: esc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ESC";
+            bindings = <&kp ESC>, <&bt BT_NXT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
     };
 
     macros {
@@ -201,20 +229,22 @@
         default_layer {
             display-name = "BASE";
             bindings = <
-&kp ESC  &kp Q  &kp W  &kp E       &kp R  &kp T       &kp Z     &kp U  &kp I   &kp O  &kp P  &kp SEMICOLON
-&kp TAB  &kp A  &kp S  &kp D       &kp F  &kp G       &kp H     &kp J  &kp K   &kp L  &del   &mltdiv
-&kp DOT  &kp Y  &kp X  &kp C       &kp V  &kp B       &kp N     &kp M  &par    &undr  &eqt   &plmi
-                       &kp LSHIFT  &spc   &kp LGUI    &kp LGUI  &entr  &rlay0
+&esc  &kp Q  &kp W  &kp E       &kp R  &kp T       &kp Z   &kp U  &kp I   &kp O  &kp P  &ddot
+&dol  &kp A  &kp S  &kp D       &kp F  &kp G       &kp H   &kp J  &kp K   &kp L  &del   &mltdiv
+&dot  &kp Y  &kp X  &kp C       &kp V  &kp B       &kp N   &kp M  &par    &undr  &eqt   &plmi
+                    &kp LSHIFT  &spc   &kp LGUI    &llay0  &entr  &rlay0
             >;
         };
 
-        layer_1 {
+        NUMBER_LAYER {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
+
+            label = "NUMR";
         };
 
         layer_2 {
