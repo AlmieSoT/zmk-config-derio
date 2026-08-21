@@ -221,6 +221,106 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        f2: f2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F2";
+            bindings = <&kp F2>, <&kp F14>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        f3: f3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F3";
+            bindings = <&kp F3>, <&kp F15>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        f4: f4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F4";
+            bindings = <&kp F4>, <&kp F16>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        f5: f5 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F5";
+            bindings = <&kp F5>, <&kp F17>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        f6: f6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F6";
+            bindings = <&kp F6>, <&kp F18>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        f7: f7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F7";
+            bindings = <&kp F7>, <&kp F19>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        f8: f8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F8";
+            bindings = <&kp F8>, <&kp F120>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        f9: f9 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F9";
+            bindings = <&kp F9>, <&kp F21>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        f10: f10 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F10";
+            bindings = <&kp F10>, <&kp F22>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        f11: f11 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F11";
+            bindings = <&kp F11>, <&kp F23>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        f12: f12 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F12";
+            bindings = <&kp F12>, <&kp F24>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
     };
 
     macros {
