@@ -368,10 +368,10 @@
 
         symbol_layer {
             bindings = <
-&kp        &kp                &kp  &kp     &kp     &kp       &kp     &ext_power EP_OFF  &kp    &ext_power EP_ON  &kp  &kp
-&kp QMARK  &ext_power EP_TOG  &kp  &kp     &kp     &kp       &kp     &kp                &kp    &kp               &kp  &kp
-&kp EXCL   &kp                &kp  &kp     &kp     &kp       &kp     &kp                &kp    &kp               &kp  &kp
-                                   &trans  &trans  &trans    &trans  &trans             &to 3
+&trans  &kp                &kp       &kp       &kp       &kp         &kp        &ext_power EP_OFF  &kp       &ext_power EP_ON  &kp  &kp
+&none   &ext_power EP_TOG  &kp APOS  &kp LBRC  &kp LBKT  &kp EXCL    &kp QMARK  &kp RBKT           &kp RBRC  &kp PIPE          &kp  &kp
+&none   &kp                &kp       &kp       &kp       &kp         &kp        &kp                &kp       &kp               &kp  &kp
+                                     &trans    &trans    &trans      &trans     &trans             &to 3
             >;
 
             label = "SYMB";
