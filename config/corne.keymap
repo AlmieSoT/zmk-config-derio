@@ -322,6 +322,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        ssz: ssz {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SSZ";
+            bindings = <&kp S>, <&ext_power EP_TOG>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
     };
 
     macros {
@@ -340,7 +349,7 @@
             display-name = "BASE";
             bindings = <
 &esc  &kp Q  &kp W  &kp E       &kp R  &kp T       &kp Z   &kp U  &kp I   &kp O  &kp P  &ddot
-&dol  &kp A  &kp S  &kp D       &kp F  &kp G       &kp H   &kp J  &kp K   &kp L  &del   &mltdiv
+&dol  &kp A  &ssz   &kp D       &kp F  &kp G       &kp H   &kp J  &kp K   &kp L  &del   &mltdiv
 &dot  &kp Y  &kp X  &kp C       &kp V  &kp B       &kp N   &kp M  &par    &undr  &eqt   &plmi
                     &kp LSHIFT  &spc   &kp LGUI    &llay0  &entr  &rlay0
             >;
@@ -359,9 +368,9 @@
 
         symbol_layer {
             bindings = <
-&trans  &trans             &trans  &trans  &trans  &trans    &trans  &ext_power EP_OFF  &trans  &ext_power EP_ON  &trans  &trans
-&trans  &ext_power EP_TOG  &trans  &trans  &trans  &trans    &trans  &trans             &trans  &trans            &trans  &trans
-&trans  &trans             &trans  &trans  &trans  &trans    &trans  &trans             &trans  &trans            &trans  &trans
+&kp        &kp                &kp  &kp     &kp     &kp       &kp     &ext_power EP_OFF  &kp    &ext_power EP_ON  &kp  &kp
+&kp QMARK  &ext_power EP_TOG  &kp  &kp     &kp     &kp       &kp     &kp                &kp    &kp               &kp  &kp
+&kp EXCL   &kp                &kp  &kp     &kp     &kp       &kp     &kp                &kp    &kp               &kp  &kp
                                    &trans  &trans  &trans    &trans  &trans             &to 3
             >;
 
