@@ -281,7 +281,7 @@
         f8: f8 {
             compatible = "zmk,behavior-mod-morph";
             label = "F8";
-            bindings = <&kp F8>, <&kp F120>;
+            bindings = <&kp F8>, <&kp F20>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
